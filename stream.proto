@@ -3,7 +3,7 @@ syntax = "proto3";
 package grpctest;
 
 service UppercaseService {
-    rpc Transform (stream UppercaseRequest) returns (UppercaseResponse){}
+    rpc Transform (stream UppercaseRequest) returns (stream UppercaseResponse){}
 }
 
 message UppercaseRequest {
