@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package grpctest;
+
+service UppercaseService {
+    rpc Transform (stream UppercaseRequest) returns (UppercaseResponse){}
+}
+
+message UppercaseRequest {
+    string message  = 1;
+}
+
+message UppercaseResponse {
+    string message = 1;
+}
+
